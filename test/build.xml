@@ -1,0 +1,16 @@
+<project name="jscover" default="build" basedir=".">
+    <property name="component.work.dir" location="./"/>
+    <target name="build">
+        <exec executable="java" failonerror="true">
+            <!--use exec to change file encoding-->
+            <arg value="-Dfile.encoding=utf-8"/>
+            <arg value="-jar"/>
+            <arg value="JSCover-all.jar"/>
+            <arg value="-fs"/>
+            <arg value="./fixture"/>
+            <arg value="./jscover"/>
+        </exec>
+        <delete dir="./jscover" includes="jscover*,**/*.html"/>
+        <delete dir="./jscover/original-src"/>
+    </target>
+</project>
