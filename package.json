@@ -22,7 +22,7 @@
     "esprima": "~1.1.1",
     "escodegen": "~1.3.2",
     "estraverse": "~1.5.0",
-    "kissy": "5.0.0-alpha.1",
+    "kissy": "5.0.0-alpha.2",
     "debug": "~0.8.1",
     "commander": "~2.2.0",
     "walk": "~2.3.3",
