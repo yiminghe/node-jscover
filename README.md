@@ -22,6 +22,43 @@ node version of [JSCover](https://github.com/tntim96/JSCover).  only support fil
   java -jar JSCover-all.jar -fs /lib /out
   ```
 
+* all arguments
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th style="width: 100px;">short name</th>
+        <th style="width: 100px;">full name</th>
+        <th style="width: 50px;">type</th>
+        <th style="width: 50px;">default</th>
+        <th>description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>-d</td>
+        <td>--dir</td>
+        <td>String</td>
+        <td></td>
+        <td>directory of javascript source files</td>
+    </tr>
+    <tr>
+        <td>-o</td>
+        <td>--out</td>
+        <td>String</td>
+        <td></td>
+        <td>destination directory of instrumented javascript source files</td>
+    </tr>
+    <tr>
+        <td>-f</td>
+        <td>--front</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>whether output JSCover front-end files to destination directory</td>
+    </tr>
+    </tbody>
+</table>
+
 ### use api
 
 * install jscover locally

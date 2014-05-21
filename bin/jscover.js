@@ -55,6 +55,7 @@ function run(program) {
 
     if (front) {
         ncp(path.join(__dirname, '../lib/front-end'), out);
+        ncp(dir, path.join(out, 'original-src'));
     }
 }
 
