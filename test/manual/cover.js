@@ -99,6 +99,8 @@ function convertBranchDataLinesToJSON(branchData) {
     }
     var json = '';
     for (var line in branchData) {
+        if (isNaN(line))
+            continue;
         if (json !== '')
             json += ','
         json += '"' + line + '":' + convertBranchDataConditionArrayToJSON(branchData[line]);
@@ -178,6 +180,19 @@ function jscoverage_serializeCoverageToJSON() {
     return '{' + json.join(',') + '}';
 }
 
+function jscoverage_parseCoverageJSON(data) {
+    var result = {};
+    var json = eval('(' + data + ')');
+    var file;
+    for (file in json) {
+        var fileCoverage = json[file];
+        result[file] = {};
+        result[file].lineData = fileCoverage.lineData;
+        result[file].functionData = fileCoverage.functionData;
+        result[file].branchData = convertBranchDataLinesFromJSON(fileCoverage.branchData);
+    }
+    return result;
+}
 
 function jscoverage_pad(s) {
     return '0000'.substr(s.length) + s;
@@ -229,34 +244,26 @@ if (! this._$jscoverage) {
 if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js']) {
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'] = {};
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].lineData = [];
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].lineData[2] = 0;
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].lineData[1] = 0;
 }
 if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].functionData) {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].functionData = {};
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].functionData = [];
 }
 if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData) {
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData = {};
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData[1] = [];
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData[1][1] = new BranchData();
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData[1][2] = new BranchData();
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData[1][3] = new BranchData();
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'] = [];
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1] = new BranchData();
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2] = new BranchData();
 }
-_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][3].init(13, 5, 'u < t');
-function visit3_1_3(result) {
-    _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][3].ranCondition(result);
-    return result;
-}
-_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2].init(4, 5, 'z > u');
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2].init(17, 6, 'x || y');
 function visit2_1_2(result) {
-    _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2].ranCondition(result);
-    return result;
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2].ranCondition(result);
+  return result;
 }
-_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1].init(4, 14, 'z > u && u < t');
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1].init(9, 5, 'x > 7');
 function visit1_1_1(result) {
-    _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1].ranCondition(result);
-    return result;
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1].ranCondition(result);
+  return result;
 }
-if (visit1_1_1(visit2_1_2(z > u) && visit3_1_3(u < t))) {
-    _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].lineData[2]++;
-    x = 2;
-}
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].lineData[1]++;
+var x = visit1_1_1(x > 7) ? visit2_1_2(x || y) : y;

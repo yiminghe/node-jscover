@@ -99,6 +99,8 @@ function convertBranchDataLinesToJSON(branchData) {
     }
     var json = '';
     for (var line in branchData) {
+        if (isNaN(line))
+            continue;
         if (json !== '')
             json += ','
         json += '"' + line + '":' + convertBranchDataConditionArrayToJSON(branchData[line]);
@@ -178,6 +180,19 @@ function jscoverage_serializeCoverageToJSON() {
     return '{' + json.join(',') + '}';
 }
 
+function jscoverage_parseCoverageJSON(data) {
+    var result = {};
+    var json = eval('(' + data + ')');
+    var file;
+    for (file in json) {
+        var fileCoverage = json[file];
+        result[file] = {};
+        result[file].lineData = fileCoverage.lineData;
+        result[file].functionData = fileCoverage.functionData;
+        result[file].branchData = convertBranchDataLinesFromJSON(fileCoverage.branchData);
+    }
+    return result;
+}
 
 function jscoverage_pad(s) {
     return '0000'.substr(s.length) + s;
@@ -226,48 +241,29 @@ catch (e) {}
 if (! this._$jscoverage) {
     this._$jscoverage = {};
 }
-if (! _$jscoverage['eturn.js']) {
-  _$jscoverage['eturn.js'] = {};
-  _$jscoverage['eturn.js'].lineData = [];
-  _$jscoverage['eturn.js'].lineData[1] = 0;
-  _$jscoverage['eturn.js'].lineData[3] = 0;
-  _$jscoverage['eturn.js'].lineData[5] = 0;
+if (! _$jscoverage['/member.js']) {
+  _$jscoverage['/member.js'] = {};
+  _$jscoverage['/member.js'].lineData = [];
+  _$jscoverage['/member.js'].lineData[1] = 0;
+  _$jscoverage['/member.js'].lineData[2] = 0;
 }
-if (! _$jscoverage['eturn.js'].functionData) {
-  _$jscoverage['eturn.js'].functionData = {};
+if (! _$jscoverage['/member.js'].functionData) {
+  _$jscoverage['/member.js'].functionData = [];
+  _$jscoverage['/member.js'].functionData[0] = 0;
 }
-if (! _$jscoverage['eturn.js'].branchData) {
-  _$jscoverage['eturn.js'].branchData = {};
-  _$jscoverage['eturn.js'].branchData[2] = [];
-  _$jscoverage['eturn.js'].branchData[2][1] = new BranchData();
-  _$jscoverage['eturn.js'].branchData[3] = [];
-  _$jscoverage['eturn.js'].branchData[3][1] = new BranchData();
-  _$jscoverage['eturn.js'].branchData[5] = [];
-  _$jscoverage['eturn.js'].branchData[5][1] = new BranchData();
+if (! _$jscoverage['/member.js'].branchData) {
+  _$jscoverage['/member.js'].branchData = {};
+  _$jscoverage['/member.js'].branchData['2'] = [];
+  _$jscoverage['/member.js'].branchData['2'][1] = new BranchData();
 }
-_$jscoverage['eturn.js'].branchData['5'][1].init(84, 7, 'z > -10');
-function visit3_5_1(result) {
-    _$jscoverage['eturn.js'].branchData['5'][1].ranCondition(result);
-    return result;
+_$jscoverage['/member.js'].branchData['2'][1].init(14, 5, 'q > z');
+function visit14_2_1(result) {
+  _$jscoverage['/member.js'].branchData['2'][1].ranCondition(result);
+  return result;
 }
-_$jscoverage['eturn.js'].branchData['3'][1].init(48, 5, 'z > 2');
-function visit2_3_1(result) {
-    _$jscoverage['eturn.js'].branchData['3'][1].ranCondition(result);
-    return result;
-}
-_$jscoverage['eturn.js'].branchData['2'][1].init(23, 5, 'z > 1');
-function visit1_2_1(result) {
-    _$jscoverage['eturn.js'].branchData['2'][1].ranCondition(result);
-    return result;
-}
-_$jscoverage['eturn.js'].lineData[1]++;
-function x(z) {
-    _$jscoverage['eturn.js'].functionData[0]++;
-    if (visit1_2_1(z > 1)) {
-        _$jscoverage['eturn.js'].lineData[3]++;
-        return [visit2_3_1(z > 2)];
-    } else {
-        _$jscoverage['eturn.js'].lineData[5]++;
-        return visit3_5_1(z > -10) ? 1 : 2;
-    }
+_$jscoverage['/member.js'].lineData[1]++;
+function x(z, q) {
+  _$jscoverage['/member.js'].functionData[0]++;
+  _$jscoverage['/member.js'].lineData[2]++;
+  return z[visit14_2_1(q > z)];
 }

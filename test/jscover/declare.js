@@ -22,9 +22,9 @@ function BranchData() {
     this.pathsCovered = function() {
         var paths = 0;
         if (this.evalTrue > 0)
-            paths++;
+          paths++;
         if (this.evalFalse > 0)
-            paths++;
+          paths++;
         return paths;
     };
 
@@ -73,7 +73,7 @@ function buildBranchMessage(conditions) {
     var message = 'The following was not covered:';
     for (var i = 0; i < conditions.length; i++) {
         if (conditions[i] !== undefined && conditions[i] !== null && !conditions[i].covered())
-            message += '\n- '+ conditions[i].message();
+          message += '\n- '+ conditions[i].message();
     }
     return message;
 };
@@ -99,6 +99,8 @@ function convertBranchDataLinesToJSON(branchData) {
     }
     var json = '';
     for (var line in branchData) {
+        if (isNaN(line))
+            continue;
         if (json !== '')
             json += ','
         json += '"' + line + '":' + convertBranchDataConditionArrayToJSON(branchData[line]);
@@ -178,6 +180,19 @@ function jscoverage_serializeCoverageToJSON() {
     return '{' + json.join(',') + '}';
 }
 
+function jscoverage_parseCoverageJSON(data) {
+    var result = {};
+    var json = eval('(' + data + ')');
+    var file;
+    for (file in json) {
+        var fileCoverage = json[file];
+        result[file] = {};
+        result[file].lineData = fileCoverage.lineData;
+        result[file].functionData = fileCoverage.functionData;
+        result[file].branchData = convertBranchDataLinesFromJSON(fileCoverage.branchData);
+    }
+    return result;
+}
 
 function jscoverage_pad(s) {
     return '0000'.substr(s.length) + s;
@@ -189,57 +204,89 @@ function jscoverage_html_escape(s) {
     });
 }
 try {
-    if (typeof top === 'object' && top !== null && typeof top.opener === 'object' && top.opener !== null) {
-        // this is a browser window that was opened from another window
+  if (typeof top === 'object' && top !== null && typeof top.opener === 'object' && top.opener !== null) {
+    // this is a browser window that was opened from another window
 
-        if (! top.opener._$jscoverage) {
-            top.opener._$jscoverage = {};
-        }
+    if (! top.opener._$jscoverage) {
+      top.opener._$jscoverage = {};
     }
+  }
 }
 catch (e) {}
 
 try {
-    if (typeof top === 'object' && top !== null) {
-        // this is a browser window
+  if (typeof top === 'object' && top !== null) {
+    // this is a browser window
 
-        try {
-            if (typeof top.opener === 'object' && top.opener !== null && top.opener._$jscoverage) {
-                top._$jscoverage = top.opener._$jscoverage;
-            }
-        }
-        catch (e) {}
-
-        if (! top._$jscoverage) {
-            top._$jscoverage = {};
-        }
+    try {
+      if (typeof top.opener === 'object' && top.opener !== null && top.opener._$jscoverage) {
+        top._$jscoverage = top.opener._$jscoverage;
+      }
     }
+    catch (e) {}
+
+    if (! top._$jscoverage) {
+      top._$jscoverage = {};
+    }
+  }
 }
 catch (e) {}
 
 try {
-    if (typeof top === 'object' && top !== null && top._$jscoverage) {
-        this._$jscoverage = top._$jscoverage;
-    }
+  if (typeof top === 'object' && top !== null && top._$jscoverage) {
+    this._$jscoverage = top._$jscoverage;
+  }
 }
 catch (e) {}
 if (! this._$jscoverage) {
-    this._$jscoverage = {};
+  this._$jscoverage = {};
 }
-if (! _$jscoverage['ith.js']) {
-  _$jscoverage['ith.js'] = {};
-  _$jscoverage['ith.js'].lineData = [];
-  _$jscoverage['ith.js'].lineData[1] = 0;
-  _$jscoverage['ith.js'].lineData[2] = 0;
+if (! _$jscoverage['/declare.js']) {
+  _$jscoverage['/declare.js'] = {};
+  _$jscoverage['/declare.js'].lineData = [];
+  _$jscoverage['/declare.js'].lineData[1] = 0;
+  _$jscoverage['/declare.js'].lineData[2] = 0;
+  _$jscoverage['/declare.js'].lineData[3] = 0;
+  _$jscoverage['/declare.js'].lineData[7] = 0;
+  _$jscoverage['/declare.js'].lineData[8] = 0;
+  _$jscoverage['/declare.js'].lineData[10] = 0;
 }
-if (! _$jscoverage['ith.js'].functionData) {
-  _$jscoverage['ith.js'].functionData = {};
+if (! _$jscoverage['/declare.js'].functionData) {
+  _$jscoverage['/declare.js'].functionData = [];
+  _$jscoverage['/declare.js'].functionData[0] = 0;
+  _$jscoverage['/declare.js'].functionData[1] = 0;
+  _$jscoverage['/declare.js'].functionData[2] = 0;
 }
-if (! _$jscoverage['ith.js'].branchData) {
-  _$jscoverage['ith.js'].branchData = {};
+if (! _$jscoverage['/declare.js'].branchData) {
+  _$jscoverage['/declare.js'].branchData = {};
+  _$jscoverage['/declare.js'].branchData['2'] = [];
+  _$jscoverage['/declare.js'].branchData['2'][1] = new BranchData();
+  _$jscoverage['/declare.js'].branchData['7'] = [];
+  _$jscoverage['/declare.js'].branchData['7'][1] = new BranchData();
 }
-_$jscoverage['ith.js'].lineData[1]++;
-with (x) {
-    _$jscoverage['ith.js'].lineData[2]++;
-    x++;
+_$jscoverage['/declare.js'].branchData['7'][1].init(86, 38, 'q || function x() {\n  x++;\n}');
+function visit8_7_1(result) {
+  _$jscoverage['/declare.js'].branchData['7'][1].ranCondition(result);
+  return result;
+}_$jscoverage['/declare.js'].branchData['2'][1].init(13, 6, 'z > 10');
+function visit7_2_1(result) {
+  _$jscoverage['/declare.js'].branchData['2'][1].ranCondition(result);
+  return result;
+}_$jscoverage['/declare.js'].lineData[1]++;
+function x(z) {
+  _$jscoverage['/declare.js'].functionData[0]++;
+  _$jscoverage['/declare.js'].lineData[2]++;
+  var y = visit7_2_1(z > 10);
+  _$jscoverage['/declare.js'].lineData[3]++;
+  var q = [function() {
+  _$jscoverage['/declare.js'].functionData[1]++;
+}];
+  _$jscoverage['/declare.js'].lineData[7]++;
+  var z = visit8_7_1(q || function x() {
+  _$jscoverage['/declare.js'].functionData[2]++;
+  _$jscoverage['/declare.js'].lineData[8]++;
+  x++;
+});
+  _$jscoverage['/declare.js'].lineData[10]++;
+  return y;
 }

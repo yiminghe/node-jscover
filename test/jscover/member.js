@@ -22,9 +22,9 @@ function BranchData() {
     this.pathsCovered = function() {
         var paths = 0;
         if (this.evalTrue > 0)
-            paths++;
+          paths++;
         if (this.evalFalse > 0)
-            paths++;
+          paths++;
         return paths;
     };
 
@@ -73,7 +73,7 @@ function buildBranchMessage(conditions) {
     var message = 'The following was not covered:';
     for (var i = 0; i < conditions.length; i++) {
         if (conditions[i] !== undefined && conditions[i] !== null && !conditions[i].covered())
-            message += '\n- '+ conditions[i].message();
+          message += '\n- '+ conditions[i].message();
     }
     return message;
 };
@@ -204,66 +204,65 @@ function jscoverage_html_escape(s) {
     });
 }
 try {
-    if (typeof top === 'object' && top !== null && typeof top.opener === 'object' && top.opener !== null) {
-        // this is a browser window that was opened from another window
+  if (typeof top === 'object' && top !== null && typeof top.opener === 'object' && top.opener !== null) {
+    // this is a browser window that was opened from another window
 
-        if (! top.opener._$jscoverage) {
-            top.opener._$jscoverage = {};
-        }
+    if (! top.opener._$jscoverage) {
+      top.opener._$jscoverage = {};
     }
+  }
 }
 catch (e) {}
 
 try {
-    if (typeof top === 'object' && top !== null) {
-        // this is a browser window
+  if (typeof top === 'object' && top !== null) {
+    // this is a browser window
 
-        try {
-            if (typeof top.opener === 'object' && top.opener !== null && top.opener._$jscoverage) {
-                top._$jscoverage = top.opener._$jscoverage;
-            }
-        }
-        catch (e) {}
-
-        if (! top._$jscoverage) {
-            top._$jscoverage = {};
-        }
+    try {
+      if (typeof top.opener === 'object' && top.opener !== null && top.opener._$jscoverage) {
+        top._$jscoverage = top.opener._$jscoverage;
+      }
     }
+    catch (e) {}
+
+    if (! top._$jscoverage) {
+      top._$jscoverage = {};
+    }
+  }
 }
 catch (e) {}
 
 try {
-    if (typeof top === 'object' && top !== null && top._$jscoverage) {
-        this._$jscoverage = top._$jscoverage;
-    }
+  if (typeof top === 'object' && top !== null && top._$jscoverage) {
+    this._$jscoverage = top._$jscoverage;
+  }
 }
 catch (e) {}
 if (! this._$jscoverage) {
-    this._$jscoverage = {};
+  this._$jscoverage = {};
 }
-if (! _$jscoverage['/with.js']) {
-  _$jscoverage['/with.js'] = {};
-  _$jscoverage['/with.js'].lineData = [];
-  _$jscoverage['/with.js'].lineData[1] = 0;
-  _$jscoverage['/with.js'].lineData[2] = 0;
-  _$jscoverage['/with.js'].lineData[3] = 0;
-  _$jscoverage['/with.js'].lineData[4] = 0;
+if (! _$jscoverage['/member.js']) {
+  _$jscoverage['/member.js'] = {};
+  _$jscoverage['/member.js'].lineData = [];
+  _$jscoverage['/member.js'].lineData[1] = 0;
+  _$jscoverage['/member.js'].lineData[2] = 0;
 }
-if (! _$jscoverage['/with.js'].functionData) {
-  _$jscoverage['/with.js'].functionData = [];
-  _$jscoverage['/with.js'].functionData[0] = 0;
+if (! _$jscoverage['/member.js'].functionData) {
+  _$jscoverage['/member.js'].functionData = [];
+  _$jscoverage['/member.js'].functionData[0] = 0;
 }
-if (! _$jscoverage['/with.js'].branchData) {
-  _$jscoverage['/with.js'].branchData = {};
+if (! _$jscoverage['/member.js'].branchData) {
+  _$jscoverage['/member.js'].branchData = {};
+  _$jscoverage['/member.js'].branchData['2'] = [];
+  _$jscoverage['/member.js'].branchData['2'][1] = new BranchData();
 }
-_$jscoverage['/with.js'].lineData[1]++;
-function x(x1) {
-  _$jscoverage['/with.js'].functionData[0]++;
-  _$jscoverage['/with.js'].lineData[2]++;
-  with (x1) {
-    _$jscoverage['/with.js'].lineData[3]++;
-    x1++;
-  }
-  _$jscoverage['/with.js'].lineData[4]++;
-  return x1;
+_$jscoverage['/member.js'].branchData['2'][1].init(14, 5, 'q > z');
+function visit14_2_1(result) {
+  _$jscoverage['/member.js'].branchData['2'][1].ranCondition(result);
+  return result;
+}_$jscoverage['/member.js'].lineData[1]++;
+function x(z, q) {
+  _$jscoverage['/member.js'].functionData[0]++;
+  _$jscoverage['/member.js'].lineData[2]++;
+  return z[visit14_2_1(q > z)];
 }

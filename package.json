@@ -11,9 +11,12 @@
     "type": "git",
     "url": "git@github.com:yiminghe/node-jscover.git"
   },
+  "bin": {
+    "jscover": "./bin/jscover.js"
+  },
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha -R spec test/spec",
-    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec test/spec/"
+    "test": "node ./node_modules/mocha/bin/mocha -R list test/spec",
+    "cover": "node ./node_modules/istanbul/lib/cli cover ./node_modules/mocha/bin/_mocha -- -R list test/spec/"
   },
   "dependencies": {
     "esprima": "~1.1.1",
@@ -22,10 +25,14 @@
     "kissy": "5.0.0-alpha.1",
     "debug": "~0.8.1",
     "commander": "~2.2.0",
-    "walk": "~2.3.3"
+    "walk": "~2.3.3",
+    "mkdirp": "~0.5.0",
+    "ncp": "~0.5.1",
+    "fs-extra": "~0.8.1"
   },
   "devDependencies": {
     "mocha": "~1.19.0",
-    "chai": "~1.9.1"
+    "chai": "~1.9.1",
+    "istanbul": "~0.2.10"
   }
 }
