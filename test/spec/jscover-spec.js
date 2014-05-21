@@ -2,7 +2,6 @@ var expect = require('chai').expect;
 var jscover = require('../../lib/jscover');
 var fs = require('fs');
 var path = require('path');
-var util = require('kissy/lib/util');
 var fixtureDir = path.join(__dirname, '../fixture');
 
 function normalizeCodeContent(str) {
@@ -10,19 +9,19 @@ function normalizeCodeContent(str) {
 }
 
 function test(file) {
-    if (file === 'switch') {
-        debugger
-    }
     var fileName = '/' + file + '.js';
     var fixture = path.join(fixtureDir, fileName);
-    var result = path.join(__dirname, '../node-jscover' + fileName);
-    var fixtureCode = normalizeCodeContent(fs.readFileSync(fixture, {
+    var result = path.join(__dirname, '../node-jscover/' + fileName);
+    var fixtureCode = fs.readFileSync(fixture, {
         encoding: 'utf-8'
-    }));
-    var resultCode = normalizeCodeContent(fs.readFileSync(result, {
+    });
+    var resultCode = fs.readFileSync(result, {
         encoding: 'utf-8'
-    }));
-    expect(normalizeCodeContent(jscover.instrument(fixtureCode, fileName))).to.equal(resultCode);
+    });
+    expect((jscover.instrument(fixtureCode, fileName, {
+        excludeInitializer: true,
+        excludeHeader: true
+    }))).to.equal(normalizeCodeContent(resultCode));
 }
 
 describe('jscover', function () {

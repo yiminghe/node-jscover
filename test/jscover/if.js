@@ -233,6 +233,7 @@ if (! _$jscoverage['/if.js']) {
   _$jscoverage['/if.js'].lineData[2] = 0;
   _$jscoverage['/if.js'].lineData[3] = 0;
   _$jscoverage['/if.js'].lineData[5] = 0;
+  _$jscoverage['/if.js'].lineData[6] = 0;
 }
 if (! _$jscoverage['/if.js'].functionData) {
   _$jscoverage['/if.js'].functionData = [];
@@ -243,26 +244,35 @@ if (! _$jscoverage['/if.js'].branchData) {
   _$jscoverage['/if.js'].branchData['2'][1] = new BranchData();
   _$jscoverage['/if.js'].branchData['2'][2] = new BranchData();
   _$jscoverage['/if.js'].branchData['2'][3] = new BranchData();
+  _$jscoverage['/if.js'].branchData['6'] = [];
+  _$jscoverage['/if.js'].branchData['6'][1] = new BranchData();
 }
-_$jscoverage['/if.js'].branchData['2'][3].init(15, 3, 'y < 1');
-function visit6_2_3(result) {
+_$jscoverage['/if.js'].branchData['6'][1].init(37, 1, '2');
+function visit8_6_1(result) {
+  _$jscoverage['/if.js'].branchData['6'][1].ranCondition(result);
+  return result;
+}_$jscoverage['/if.js'].branchData['2'][3].init(14, 3, 'y < 1');
+function visit7_2_3(result) {
   _$jscoverage['/if.js'].branchData['2'][3].ranCondition(result);
   return result;
-}_$jscoverage['/if.js'].branchData['2'][2].init(10, 3, 'x > 1');
-function visit5_2_2(result) {
+}_$jscoverage['/if.js'].branchData['2'][2].init(9, 3, 'x > 1');
+function visit6_2_2(result) {
   _$jscoverage['/if.js'].branchData['2'][2].ranCondition(result);
   return result;
-}_$jscoverage['/if.js'].branchData['2'][1].init(10, 8, 'x > 1 && y < 1');
-function visit4_2_1(result) {
+}_$jscoverage['/if.js'].branchData['2'][1].init(9, 8, 'x > 1 && y < 1');
+function visit5_2_1(result) {
   _$jscoverage['/if.js'].branchData['2'][1].ranCondition(result);
   return result;
 }_$jscoverage['/if.js'].lineData[1]++;
 var x;
 _$jscoverage['/if.js'].lineData[2]++;
-if (visit4_2_1(visit5_2_2(x > 1) && visit6_2_3(y < 1))) {
+if (visit5_2_1(visit6_2_2(x > 1) && visit7_2_3(y < 1))) {
   _$jscoverage['/if.js'].lineData[3]++;
   x++;
 } else {
   _$jscoverage['/if.js'].lineData[5]++;
   y++;
+}
+_$jscoverage['/if.js'].lineData[6]++;
+if (visit8_6_1(2)) {
 }

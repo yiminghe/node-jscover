@@ -1,10 +1,13 @@
 var jscover = require('../../lib/jscover');
+var fs = require('fs');
+var path = require('path');
 
-console.log(jscover.instrument(['var x = {',
-    'z:function(){',
-    ' x=1;',
-    '}',
-    '};',
-'(function q(){',
-    'y=1;',
-'})();'].join('\n'), 'test.js'));
+
+var code = fs.readFileSync(path.join(__dirname, 'code.js'), {
+    encoding: 'utf-8'
+});
+
+fs.writeFileSync(path.join(__dirname, 'cover.js'),
+    jscover.instrument(code, path.join(__dirname, 'cover.js')), {
+        encoding: 'utf-8'
+    });

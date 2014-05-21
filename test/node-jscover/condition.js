@@ -226,57 +226,53 @@ catch (e) {}
 if (! this._$jscoverage) {
     this._$jscoverage = {};
 }
-if (! _$jscoverage['/if.js']) {
-  _$jscoverage['/if.js'] = {};
-  _$jscoverage['/if.js'].lineData = [];
-  _$jscoverage['/if.js'].lineData[1] = 0;
-  _$jscoverage['/if.js'].lineData[2] = 0;
-  _$jscoverage['/if.js'].lineData[3] = 0;
-  _$jscoverage['/if.js'].lineData[5] = 0;
-  _$jscoverage['/if.js'].lineData[6] = 0;
+if (! _$jscoverage['/condition.js']) {
+  _$jscoverage['/condition.js'] = {};
+  _$jscoverage['/condition.js'].lineData = [];
+  _$jscoverage['/condition.js'].lineData[1] = 0;
+  _$jscoverage['/condition.js'].lineData[2] = 0;
+  _$jscoverage['/condition.js'].lineData[3] = 0;
+  _$jscoverage['/condition.js'].lineData[4] = 0;
 }
-if (! _$jscoverage['/if.js'].functionData) {
-  _$jscoverage['/if.js'].functionData = [];
+if (! _$jscoverage['/condition.js'].functionData) {
+  _$jscoverage['/condition.js'].functionData = [];
 }
-if (! _$jscoverage['/if.js'].branchData) {
-  _$jscoverage['/if.js'].branchData = {};
-  _$jscoverage['/if.js'].branchData[2] = [];
-  _$jscoverage['/if.js'].branchData[2][1] = new BranchData();
-  _$jscoverage['/if.js'].branchData[2][2] = new BranchData();
-  _$jscoverage['/if.js'].branchData[2][3] = new BranchData();
-  _$jscoverage['/if.js'].branchData[6] = [];
-  _$jscoverage['/if.js'].branchData[6][1] = new BranchData();
+if (! _$jscoverage['/condition.js'].branchData) {
+  _$jscoverage['/condition.js'].branchData = {};
+  _$jscoverage['/condition.js'].branchData[1] = [];
+  _$jscoverage['/condition.js'].branchData[1][1] = new BranchData();
+  _$jscoverage['/condition.js'].branchData[2] = [];
+  _$jscoverage['/condition.js'].branchData[2][1] = new BranchData();
+  _$jscoverage['/condition.js'].branchData[3] = [];
+  _$jscoverage['/condition.js'].branchData[3][1] = new BranchData();
+  _$jscoverage['/condition.js'].branchData[4] = [];
+  _$jscoverage['/condition.js'].branchData[4][1] = new BranchData();
 }
-_$jscoverage['/if.js'].branchData[6][1].init(4, 1, '2');
-function visit4_6_1(result) {
-    _$jscoverage['/if.js'].branchData[6][1].ranCondition(result);
+_$jscoverage['/condition.js'].branchData[4][1].init(3, 5, 'x > t');
+function visit4_4_1(result) {
+    _$jscoverage['/condition.js'].branchData[4][1].ranCondition(result);
     return result;
 }
-_$jscoverage['/if.js'].branchData[2][3].init(9, 5, 'y < 1');
-function visit3_2_3(result) {
-    _$jscoverage['/if.js'].branchData[2][3].ranCondition(result);
+_$jscoverage['/condition.js'].branchData[3][1].init(1, 5, 'q > z');
+function visit3_3_1(result) {
+    _$jscoverage['/condition.js'].branchData[3][1].ranCondition(result);
     return result;
 }
-_$jscoverage['/if.js'].branchData[2][2].init(4, 5, 'x > 1');
-function visit2_2_2(result) {
-    _$jscoverage['/if.js'].branchData[2][2].ranCondition(result);
+_$jscoverage['/condition.js'].branchData[2][1].init(5, 5, 'q > w');
+function visit2_2_1(result) {
+    _$jscoverage['/condition.js'].branchData[2][1].ranCondition(result);
     return result;
 }
-_$jscoverage['/if.js'].branchData[2][1].init(4, 14, 'x > 1 && y < 1');
-function visit1_2_1(result) {
-    _$jscoverage['/if.js'].branchData[2][1].ranCondition(result);
+_$jscoverage['/condition.js'].branchData[1][1].init(5, 5, 'x > y');
+function visit1_1_1(result) {
+    _$jscoverage['/condition.js'].branchData[1][1].ranCondition(result);
     return result;
 }
-_$jscoverage['/if.js'].lineData[1]++;
-var x;
-_$jscoverage['/if.js'].lineData[2]++;
-if (visit1_2_1(visit2_2_2(x > 1) && visit3_2_3(y < 1))) {
-    _$jscoverage['/if.js'].lineData[3]++;
-    x++;
-} else {
-    _$jscoverage['/if.js'].lineData[5]++;
-    y++;
-}
-_$jscoverage['/if.js'].lineData[6]++;
-if (visit4_6_1(2)) {
-}
+_$jscoverage['/condition.js'].lineData[1]++;
+x = visit1_1_1(x > y) ? 1 : 2;
+_$jscoverage['/condition.js'].lineData[2]++;
+z = visit2_2_1(q > w);
+_$jscoverage['/condition.js'].lineData[3]++;
+visit3_3_1(q > z);
+_$jscoverage['/condition.js'].lineData[4]++;
+x(visit4_4_1(x > t));
