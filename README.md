@@ -1,5 +1,10 @@
 ## node-jscover - - A JavaScript code coverage measurement tool
 
+[![NPM version](https://nodei.co/npm/node-jscover.png)](https://npmjs.org/package/node-jscover)
+[![NPM downloads](http://img.shields.io/npm/dm/node-jscover.svg)](https://npmjs.org/package/node-jscover)
+[![Build Status](https://travis-ci.org/yiminghe/node-jscover.svg?branch=master)](https://travis-ci.org/yiminghe/node-jscover)
+[![Coverage Status](https://coveralls.io/repos/yiminghe/node-jscover/badge.png?branch=master)](https://coveralls.io/r/yiminghe/node-jscover?branch=master)
+
 node version of [JSCover](https://github.com/tntim96/JSCover).  only support file system instrument.
 
 ### use command line tools

@@ -1,4 +1,5 @@
 test/
+lib-cov/
 nohup.out
 coverage/
 lib-cover/

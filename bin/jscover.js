@@ -13,12 +13,6 @@ var fs = require('fs');
 var mkdirp = require('mkdirp');
 var ncp = require('ncp').ncp;
 
-program
-    .option('-d, --dir <dir>', 'source file dir')
-    .option('-o, --out <out>', 'instrumented file dir')
-    .option('-f, --front', 'whether generate front-end')
-    .parse(process.argv);
-
 function normalizeSlash(str) {
     return str.replace(/\\/g, '/');
 }
@@ -62,5 +56,19 @@ function run(program) {
 exports.run = run;
 
 if (require.main === module) {
+    program.option('-d, --dir <dir>', 'source file dir')
+        .option('-o, --out <out>', 'instrumented file dir')
+        .option('-f, --front [front]', 'whether generate front-end')
+        .parse(process.argv);
+
+    var options = program.options;
+
+    options.forEach(function (o) {
+        var name = o.name();
+        if (o.required && !(name in program)) {
+            program.optionMissingArgument(o);
+        }
+    });
+
     run(program);
 }

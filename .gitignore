@@ -1,6 +1,7 @@
 nohup.out
 coverage/
 lib-cover/
+lib-cov/
 tmp/
 *.iml
 .idea/
