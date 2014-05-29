@@ -20,7 +20,12 @@ function normalizeSlash(str) {
 function run(program) {
     var dir = program.dir,
         out = program.out,
+        header = program.header,
         front = program.front;
+
+    if (header === undefined) {
+        header = true;
+    }
 
     //noinspection JSUnresolvedFunction
     var walker = walk.walk(dir);
@@ -34,7 +39,9 @@ function run(program) {
         var code = fs.readFileSync(filePath, {
             encoding: 'utf-8'
         });
-        var instrumentedCode = jscover.instrument(code, normalizeSlash(subPath));
+        var instrumentedCode = jscover.instrument(code, normalizeSlash(subPath), {
+            excludeHeader: !header
+        });
 
         mkdirp.sync(path.dirname(destPath));
 
@@ -58,6 +65,7 @@ exports.run = run;
 if (require.main === module) {
     program.option('-d, --dir <dir>', 'source file dir')
         .option('-o, --out <out>', 'instrumented file dir')
+        .option('--no-header', 'instrumented file dir')
         .option('-f, --front [front]', 'whether generate front-end')
         .parse(process.argv);
 

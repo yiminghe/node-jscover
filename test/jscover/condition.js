@@ -270,40 +270,40 @@ if (! _$jscoverage['/condition.js'].branchData) {
   _$jscoverage['/condition.js'].branchData['6'][1] = new BranchData();
 }
 _$jscoverage['/condition.js'].branchData['6'][1].init(99, 9, 'x1 === y1');
-function visit6_6_1(result) {
+function visit8_6_1(result) {
   _$jscoverage['/condition.js'].branchData['6'][1].ranCondition(result);
   return result;
 }_$jscoverage['/condition.js'].branchData['5'][1].init(83, 7, 'x1 < y1');
-function visit5_5_1(result) {
+function visit7_5_1(result) {
   _$jscoverage['/condition.js'].branchData['5'][1].ranCondition(result);
   return result;
 }_$jscoverage['/condition.js'].branchData['4'][1].init(70, 7, 'x1 > y1');
-function visit4_4_1(result) {
+function visit6_4_1(result) {
   _$jscoverage['/condition.js'].branchData['4'][1].ranCondition(result);
   return result;
 }_$jscoverage['/condition.js'].branchData['3'][2].init(46, 8, 'x1 || y1');
-function visit3_3_2(result) {
+function visit5_3_2(result) {
   _$jscoverage['/condition.js'].branchData['3'][2].ranCondition(result);
   return result;
 }_$jscoverage['/condition.js'].branchData['3'][1].init(36, 7, 'x1 > y1');
-function visit2_3_1(result) {
+function visit4_3_1(result) {
   _$jscoverage['/condition.js'].branchData['3'][1].ranCondition(result);
   return result;
 }_$jscoverage['/condition.js'].branchData['2'][1].init(10, 7, 'x1 > y1');
-function visit1_2_1(result) {
+function visit3_2_1(result) {
   _$jscoverage['/condition.js'].branchData['2'][1].ranCondition(result);
   return result;
 }_$jscoverage['/condition.js'].lineData[1]++;
 function x(x1, y1, fn) {
   _$jscoverage['/condition.js'].functionData[0]++;
   _$jscoverage['/condition.js'].lineData[2]++;
-  x1 = visit1_2_1(x1 > y1) ? 1 : 2;
+  x1 = visit3_2_1(x1 > y1) ? 1 : 2;
   _$jscoverage['/condition.js'].lineData[3]++;
-  x1 = visit2_3_1(x1 > y1) ? visit3_3_2(x1 || y1) : x1;
+  x1 = visit4_3_1(x1 > y1) ? visit5_3_2(x1 || y1) : x1;
   _$jscoverage['/condition.js'].lineData[4]++;
-  x1 = visit4_4_1(x1 > y1);
+  x1 = visit6_4_1(x1 > y1);
   _$jscoverage['/condition.js'].lineData[5]++;
-  visit5_5_1(x1 < y1);
+  visit7_5_1(x1 < y1);
   _$jscoverage['/condition.js'].lineData[6]++;
-  fn(visit6_6_1(x1 === y1));
+  fn(visit8_6_1(x1 === y1));
 }

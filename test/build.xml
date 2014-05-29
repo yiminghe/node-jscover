@@ -20,6 +20,7 @@
             <arg value="${component.work.dir}/front-end/original-src"/>
             <arg value="-o"/>
             <arg value="${component.work.dir}/node-jscover"/>
+            <arg value="--no-header"/>
         </exec>
     </target>
 </project>

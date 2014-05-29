@@ -241,52 +241,28 @@ catch (e) {}
 if (! this._$jscoverage) {
   this._$jscoverage = {};
 }
-if (! _$jscoverage['/declare.js']) {
-  _$jscoverage['/declare.js'] = {};
-  _$jscoverage['/declare.js'].lineData = [];
-  _$jscoverage['/declare.js'].lineData[1] = 0;
-  _$jscoverage['/declare.js'].lineData[2] = 0;
-  _$jscoverage['/declare.js'].lineData[3] = 0;
-  _$jscoverage['/declare.js'].lineData[7] = 0;
-  _$jscoverage['/declare.js'].lineData[8] = 0;
-  _$jscoverage['/declare.js'].lineData[10] = 0;
+if (! _$jscoverage['/complext-if.js']) {
+  _$jscoverage['/complext-if.js'] = {};
+  _$jscoverage['/complext-if.js'].lineData = [];
+  _$jscoverage['/complext-if.js'].lineData[1] = 0;
 }
-if (! _$jscoverage['/declare.js'].functionData) {
-  _$jscoverage['/declare.js'].functionData = [];
-  _$jscoverage['/declare.js'].functionData[0] = 0;
-  _$jscoverage['/declare.js'].functionData[1] = 0;
-  _$jscoverage['/declare.js'].functionData[2] = 0;
+if (! _$jscoverage['/complext-if.js'].functionData) {
+  _$jscoverage['/complext-if.js'].functionData = [];
 }
-if (! _$jscoverage['/declare.js'].branchData) {
-  _$jscoverage['/declare.js'].branchData = {};
-  _$jscoverage['/declare.js'].branchData['2'] = [];
-  _$jscoverage['/declare.js'].branchData['2'][1] = new BranchData();
-  _$jscoverage['/declare.js'].branchData['7'] = [];
-  _$jscoverage['/declare.js'].branchData['7'][1] = new BranchData();
+if (! _$jscoverage['/complext-if.js'].branchData) {
+  _$jscoverage['/complext-if.js'].branchData = {};
+  _$jscoverage['/complext-if.js'].branchData['1'] = [];
+  _$jscoverage['/complext-if.js'].branchData['1'][1] = new BranchData();
+  _$jscoverage['/complext-if.js'].branchData['1'][2] = new BranchData();
 }
-_$jscoverage['/declare.js'].branchData['7'][1].init(86, 38, 'q || function x() {\n  x++;\n}');
-function visit10_7_1(result) {
-  _$jscoverage['/declare.js'].branchData['7'][1].ranCondition(result);
+_$jscoverage['/complext-if.js'].branchData['1'][2].init(7, 22, 'b.match(c) || [\'\', \'\']');
+function visit2_1_2(result) {
+  _$jscoverage['/complext-if.js'].branchData['1'][2].ranCondition(result);
   return result;
-}_$jscoverage['/declare.js'].branchData['2'][1].init(13, 6, 'z > 10');
-function visit9_2_1(result) {
-  _$jscoverage['/declare.js'].branchData['2'][1].ranCondition(result);
+}_$jscoverage['/complext-if.js'].branchData['1'][1].init(3, 45, '!a[(b.match(c) || [\'\', \'\'])[1].toLowerCase()]');
+function visit1_1_1(result) {
+  _$jscoverage['/complext-if.js'].branchData['1'][1].ranCondition(result);
   return result;
-}_$jscoverage['/declare.js'].lineData[1]++;
-function x(z) {
-  _$jscoverage['/declare.js'].functionData[0]++;
-  _$jscoverage['/declare.js'].lineData[2]++;
-  var y = visit9_2_1(z > 10);
-  _$jscoverage['/declare.js'].lineData[3]++;
-  var q = [function() {
-  _$jscoverage['/declare.js'].functionData[1]++;
-}];
-  _$jscoverage['/declare.js'].lineData[7]++;
-  var z = visit10_7_1(q || function x() {
-  _$jscoverage['/declare.js'].functionData[2]++;
-  _$jscoverage['/declare.js'].lineData[8]++;
-  x++;
-});
-  _$jscoverage['/declare.js'].lineData[10]++;
-  return y;
+}_$jscoverage['/complext-if.js'].lineData[1]++;
+if (visit1_1_1(!a[(visit2_1_2(b.match(c) || ['', '']))[1].toLowerCase()])) {
 }

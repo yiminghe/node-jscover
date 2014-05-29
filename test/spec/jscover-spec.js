@@ -5,7 +5,7 @@ var esprima = require('esprima');
 var escodegen = require('escodegen');
 var estraverse = require('estraverse');
 var cli = require('../../bin/jscover');
-var jsCoverDir = path.join(__dirname, '../jscover/');
+var resultDir = path.join(__dirname, '../result/');
 var nodeJsCoverDir = path.join(__dirname, '../node-jscover/');
 var srcDir = path.join(__dirname, '../front-end/original-src');
 var mkdirp = require('mkdirp');
@@ -52,7 +52,7 @@ function test(file) {
         //return;
     }
     var fileName = '/' + file + '.js';
-    var instrument = path.join(jsCoverDir, fileName);
+    var instrument = path.join(resultDir, fileName);
     var result = path.join(nodeJsCoverDir, fileName);
     var resultCode = normalizeCodeContent(fs.readFileSync(result, {
         encoding: 'utf-8'
@@ -61,7 +61,7 @@ function test(file) {
         encoding: 'utf-8'
     }));
     if (instrumented !== resultCode) {
-        mkdirp.sync('tmp/')
+        mkdirp.sync('tmp/');
         fs.writeFileSync('tmp/' + file + '-instrumented.js', instrumented, {
             encoding: 'utf-8'
         });
@@ -89,6 +89,7 @@ describe('jscover', function () {
     cli.run({
         dir: srcDir,
         out: nodeJsCoverDir,
+        header: false,
         silent: true
     });
 

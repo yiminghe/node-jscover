@@ -269,40 +269,40 @@ if (! _$jscoverage['/return.js'].branchData) {
   _$jscoverage['/return.js'].branchData['7'][1] = new BranchData();
 }
 _$jscoverage['/return.js'].branchData['7'][1].init(16, 6, 'z > 10');
-function visit19_7_1(result) {
+function visit21_7_1(result) {
   _$jscoverage['/return.js'].branchData['7'][1].ranCondition(result);
   return result;
 }_$jscoverage['/return.js'].branchData['5'][1].init(16, 7, 'z > -10');
-function visit18_5_1(result) {
+function visit20_5_1(result) {
   _$jscoverage['/return.js'].branchData['5'][1].ranCondition(result);
   return result;
 }_$jscoverage['/return.js'].branchData['4'][1].init(58, 5, 'z < 2');
-function visit17_4_1(result) {
+function visit19_4_1(result) {
   _$jscoverage['/return.js'].branchData['4'][1].ranCondition(result);
   return result;
 }_$jscoverage['/return.js'].branchData['3'][1].init(17, 5, 'z > 2');
-function visit16_3_1(result) {
+function visit18_3_1(result) {
   _$jscoverage['/return.js'].branchData['3'][1].ranCondition(result);
   return result;
 }_$jscoverage['/return.js'].branchData['2'][1].init(9, 5, 'z > 1');
-function visit15_2_1(result) {
+function visit17_2_1(result) {
   _$jscoverage['/return.js'].branchData['2'][1].ranCondition(result);
   return result;
 }_$jscoverage['/return.js'].lineData[1]++;
 function x(z) {
   _$jscoverage['/return.js'].functionData[0]++;
   _$jscoverage['/return.js'].lineData[2]++;
-  if (visit15_2_1(z > 1)) {
+  if (visit17_2_1(z > 1)) {
     _$jscoverage['/return.js'].lineData[3]++;
-    return [visit16_3_1(z > 2)];
+    return [visit18_3_1(z > 2)];
   } else {
     _$jscoverage['/return.js'].lineData[4]++;
-    if (visit17_4_1(z < 2)) {
+    if (visit19_4_1(z < 2)) {
       _$jscoverage['/return.js'].lineData[5]++;
-      return visit18_5_1(z > -10) ? 1 : 2;
+      return visit20_5_1(z > -10) ? 1 : 2;
     } else {
       _$jscoverage['/return.js'].lineData[7]++;
-      return visit19_7_1(z > 10);
+      return visit21_7_1(z > 10);
     }
   }
 }

@@ -7,7 +7,11 @@ var code = fs.readFileSync(path.join(__dirname, 'code.js'), {
     encoding: 'utf-8'
 });
 
-fs.writeFileSync(path.join(__dirname, 'cover.js'),
-    jscover.instrument(code, path.join(__dirname, 'cover.js')), {
-        encoding: 'utf-8'
-    });
+var coverFile = path.join(__dirname, 'cover.js');
+
+var instrumented = jscover.instrument(code, coverFile);
+
+fs.writeFileSync(path.join(__dirname, 'cover.js'), instrumented, {
+    encoding: 'utf-8'
+});
+console.log('done');

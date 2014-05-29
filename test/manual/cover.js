@@ -254,16 +254,23 @@ if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].bra
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'] = [];
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1] = new BranchData();
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2] = new BranchData();
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][3] = new BranchData();
 }
-_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2].init(17, 6, 'x || y');
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][3].init(9, 5, 'b > c');
+function visit3_1_3(result) {
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][3].ranCondition(result);
+  return result;
+}
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2].init(5, 2, '!a');
 function visit2_1_2(result) {
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2].ranCondition(result);
   return result;
 }
-_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1].init(9, 5, 'x > 7');
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1].init(5, 11, '!a || b > c');
 function visit1_1_1(result) {
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1].ranCondition(result);
   return result;
 }
 _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].lineData[1]++;
-var x = visit1_1_1(x > 7) ? visit2_1_2(x || y) : y;
+if (visit1_1_1(visit2_1_2(!a) || visit3_1_3(b > c))) {
+}
