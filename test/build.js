@@ -9,6 +9,7 @@ srcFiles.forEach(function (f) {
     f = path.join(src, f);
     jscover.transformFile({
         src: f,
+        name: path.basename(f),
         dest: destFile,
         header: false,
         silent: true,

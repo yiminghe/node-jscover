@@ -20,6 +20,7 @@ function normalizeSlash(str) {
 function transformFile(config) {
     var header = config.header;
     var src = config.src;
+    var name = config.name || src;
     var dest = config.dest;
     var silent = config.silent;
     var code = fs.readFileSync(src, {
@@ -30,7 +31,7 @@ function transformFile(config) {
         jscover.reset();
     }
 
-    var instrumentedCode = jscover.instrument(code, normalizeSlash(src), {
+    var instrumentedCode = jscover.instrument(code, normalizeSlash(name), {
         excludeHeader: !header
     });
 
@@ -65,7 +66,7 @@ function run(program) {
         var filePath = path.join(root, fileStats.name);
         var subPath = filePath.substring(dir.length);
         var destPath = out + subPath;
-        transformFile({src: filePath, dest: destPath, header: header});
+        transformFile({src: filePath, name: subPath, dest: destPath, header: header});
         next();
     });
 
