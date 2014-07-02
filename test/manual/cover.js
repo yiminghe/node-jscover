@@ -246,36 +246,42 @@ catch (e) {
 if (typeof _$jscoverage === 'undefined') {
     _$jscoverage = {};
 }
-if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js']) {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'] = {};
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].lineData = [];
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].lineData[1] = 0;
+if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js']) {
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'] = {};
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData = [];
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData[1] = 0;
 }
-if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].functionData) {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].functionData = [];
+if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData) {
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData = [];
 }
-if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData) {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData = {};
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'] = [];
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1] = new BranchData();
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2] = new BranchData();
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][3] = new BranchData();
+if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData) {
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData = {};
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'] = [];
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][1] = new BranchData();
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][2] = new BranchData();
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][3] = new BranchData();
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][4] = new BranchData();
 }
-_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][3].init(9, 5, 'b > c');
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][4].init(34, 5, 'i < 1');
+function visit4_1_4(result) {
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][4].ranCondition(result);
+  return result;
+}
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][3].init(13, 7, 'l !== f');
 function visit3_1_3(result) {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][3].ranCondition(result);
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][3].ranCondition(result);
   return result;
 }
-_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2].init(5, 2, '!a');
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][2].init(13, 12, 'l !== f && l');
 function visit2_1_2(result) {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][2].ranCondition(result);
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][2].ranCondition(result);
   return result;
 }
-_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1].init(5, 11, '!a || b > c');
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][1].init(5, 30, 'w && (u = l !== f && l, i = n)');
 function visit1_1_1(result) {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].branchData['1'][1].ranCondition(result);
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData['1'][1].ranCondition(result);
   return result;
 }
-_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\cover.js'].lineData[1]++;
-if (visit1_1_1(visit2_1_2(!a) || visit3_1_3(b > c))) {
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData[1]++;
+for (visit1_1_1(w && (u = visit2_1_2(visit3_1_3(l !== f) && l), i = n)); visit4_1_4(i < 1); i++) {
 }

@@ -17,6 +17,35 @@ function normalizeSlash(str) {
     return str.replace(/\\/g, '/');
 }
 
+function transformFile(config) {
+    var header = config.header;
+    var src = config.src;
+    var dest = config.dest;
+    var silent = config.silent;
+    var code = fs.readFileSync(src, {
+        encoding: 'utf-8'
+    });
+
+    if (config.reset) {
+        jscover.reset();
+    }
+
+    var instrumentedCode = jscover.instrument(code, normalizeSlash(src), {
+        excludeHeader: !header
+    });
+
+    mkdirp.sync(path.dirname(dest));
+
+    fs.writeFileSync(dest, instrumentedCode, {
+        encoding: 'utf-8'
+    });
+
+    if (!silent) {
+        console.log('generate instrumented file: ' + dest + ' for ' + src);
+        console.log();
+    }
+}
+
 function run(program) {
     var dir = program.dir,
         out = program.out,
@@ -36,21 +65,7 @@ function run(program) {
         var filePath = path.join(root, fileStats.name);
         var subPath = filePath.substring(dir.length);
         var destPath = out + subPath;
-        var code = fs.readFileSync(filePath, {
-            encoding: 'utf-8'
-        });
-        var instrumentedCode = jscover.instrument(code, normalizeSlash(subPath), {
-            excludeHeader: !header
-        });
-
-        mkdirp.sync(path.dirname(destPath));
-
-        fs.writeFileSync(destPath, instrumentedCode, {
-            encoding: 'utf-8'
-        });
-        if (!program.silent) {
-            console.log('generate instrumented file: ' + destPath + ' for ' + filePath);
-        }
+        transformFile({src: filePath, dest: destPath, header: header});
         next();
     });
 
@@ -61,6 +76,7 @@ function run(program) {
 }
 
 exports.run = run;
+exports.transformFile = transformFile;
 
 if (require.main === module) {
     program.option('-d, --dir <dir>', 'source file dir')

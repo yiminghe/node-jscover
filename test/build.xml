@@ -15,12 +15,7 @@
 
         <exec executable="node" failonerror="true">
             <!--use exec to change file encoding-->
-            <arg value="${component.work.dir}/../bin/jscover"/>
-            <arg value="-d"/>
-            <arg value="${component.work.dir}/front-end/original-src"/>
-            <arg value="-o"/>
-            <arg value="${component.work.dir}/node-jscover"/>
-            <arg value="--no-header"/>
+            <arg value="${component.work.dir}/build"/>
         </exec>
     </target>
 </project>

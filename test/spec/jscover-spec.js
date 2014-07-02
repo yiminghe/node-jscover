@@ -4,7 +4,6 @@ var path = require('path');
 var esprima = require('esprima');
 var escodegen = require('escodegen');
 var estraverse = require('estraverse');
-var cli = require('../../bin/jscover');
 var resultDir = path.join(__dirname, '../result/');
 var nodeJsCoverDir = path.join(__dirname, '../node-jscover/');
 var srcDir = path.join(__dirname, '../front-end/original-src');
@@ -86,13 +85,7 @@ describe('jscover', function () {
         }
     });
 
-    cli.run({
-        dir: srcDir,
-        out: nodeJsCoverDir,
-        header: false,
-        silent: true
-    });
-
+    require('../build');
 
     statements.forEach(function (s) {
         it('instrument ' + s + ' statement', function () {

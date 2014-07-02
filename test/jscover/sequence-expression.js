@@ -241,69 +241,58 @@ catch (e) {}
 if (! this._$jscoverage) {
   this._$jscoverage = {};
 }
-if (! _$jscoverage['/switch.js']) {
-  _$jscoverage['/switch.js'] = {};
-  _$jscoverage['/switch.js'].lineData = [];
-  _$jscoverage['/switch.js'].lineData[1] = 0;
-  _$jscoverage['/switch.js'].lineData[2] = 0;
-  _$jscoverage['/switch.js'].lineData[4] = 0;
-  _$jscoverage['/switch.js'].lineData[5] = 0;
-  _$jscoverage['/switch.js'].lineData[6] = 0;
-  _$jscoverage['/switch.js'].lineData[8] = 0;
-  _$jscoverage['/switch.js'].lineData[9] = 0;
-  _$jscoverage['/switch.js'].lineData[12] = 0;
-  _$jscoverage['/switch.js'].lineData[14] = 0;
-  _$jscoverage['/switch.js'].lineData[15] = 0;
-  _$jscoverage['/switch.js'].lineData[17] = 0;
-  _$jscoverage['/switch.js'].lineData[18] = 0;
-  _$jscoverage['/switch.js'].lineData[20] = 0;
+if (! _$jscoverage['/sequence-expression.js']) {
+  _$jscoverage['/sequence-expression.js'] = {};
+  _$jscoverage['/sequence-expression.js'].lineData = [];
+  _$jscoverage['/sequence-expression.js'].lineData[1] = 0;
+  _$jscoverage['/sequence-expression.js'].lineData[2] = 0;
 }
-if (! _$jscoverage['/switch.js'].functionData) {
-  _$jscoverage['/switch.js'].functionData = [];
-  _$jscoverage['/switch.js'].functionData[0] = 0;
+if (! _$jscoverage['/sequence-expression.js'].functionData) {
+  _$jscoverage['/sequence-expression.js'].functionData = [];
 }
-if (! _$jscoverage['/switch.js'].branchData) {
-  _$jscoverage['/switch.js'].branchData = {};
-  _$jscoverage['/switch.js'].branchData['12'] = [];
-  _$jscoverage['/switch.js'].branchData['12'][1] = new BranchData();
+if (! _$jscoverage['/sequence-expression.js'].branchData) {
+  _$jscoverage['/sequence-expression.js'].branchData = {};
+  _$jscoverage['/sequence-expression.js'].branchData['1'] = [];
+  _$jscoverage['/sequence-expression.js'].branchData['1'][1] = new BranchData();
+  _$jscoverage['/sequence-expression.js'].branchData['2'] = [];
+  _$jscoverage['/sequence-expression.js'].branchData['2'][1] = new BranchData();
+  _$jscoverage['/sequence-expression.js'].branchData['2'][2] = new BranchData();
+  _$jscoverage['/sequence-expression.js'].branchData['2'][3] = new BranchData();
+  _$jscoverage['/sequence-expression.js'].branchData['2'][4] = new BranchData();
+  _$jscoverage['/sequence-expression.js'].branchData['2'][5] = new BranchData();
+  _$jscoverage['/sequence-expression.js'].branchData['2'][6] = new BranchData();
 }
-_$jscoverage['/switch.js'].branchData['12'][1].init(169, 6, 'x1 > 1');
-function visit30_12_1(result) {
-  _$jscoverage['/switch.js'].branchData['12'][1].ranCondition(result);
+_$jscoverage['/sequence-expression.js'].branchData['2'][6].init(5, 7, 'l !== f');
+function visit29_2_6(result) {
+  _$jscoverage['/sequence-expression.js'].branchData['2'][6].ranCondition(result);
   return result;
-}_$jscoverage['/switch.js'].lineData[1]++;
-function x(x1, y1) {
-  _$jscoverage['/switch.js'].functionData[0]++;
-  _$jscoverage['/switch.js'].lineData[2]++;
-  switch (x1) {
-    case 1:
-      _$jscoverage['/switch.js'].lineData[4]++;
-      x1++;
-      _$jscoverage['/switch.js'].lineData[5]++;
-      y1++;
-      _$jscoverage['/switch.js'].lineData[6]++;
-      break;
-    default:
-      _$jscoverage['/switch.js'].lineData[8]++;
-      x1 += 2;
-      _$jscoverage['/switch.js'].lineData[9]++;
-      y1 += 2;
-  }
-  _$jscoverage['/switch.js'].lineData[12]++;
-  switch (visit30_12_1(x1 > 1)) {
-    case true:
-      _$jscoverage['/switch.js'].lineData[14]++;
-      x1++;
-      _$jscoverage['/switch.js'].lineData[15]++;
-      break;
-    case false:
-      _$jscoverage['/switch.js'].lineData[17]++;
-      x1--;
-      _$jscoverage['/switch.js'].lineData[18]++;
-      break;
-  }
-  _$jscoverage['/switch.js'].lineData[20]++;
-  return {
-  x1: x1, 
-  y1: y1};
+}_$jscoverage['/sequence-expression.js'].branchData['2'][5].init(12, 12, 'visit26_2_3(l !== f) && l');
+function visit28_2_5(result) {
+  _$jscoverage['/sequence-expression.js'].branchData['2'][5].ranCondition(result);
+  return result;
+}_$jscoverage['/sequence-expression.js'].branchData['2'][4].init(16, 28, 'w && (u = visit25_2_2(visit26_2_3(l !== f) && l) , i = n)');
+function visit27_2_4(result) {
+  _$jscoverage['/sequence-expression.js'].branchData['2'][4].ranCondition(result);
+  return result;
+}_$jscoverage['/sequence-expression.js'].branchData['2'][3].init(24, 7, 'l !== f');
+function visit26_2_3(result) {
+  _$jscoverage['/sequence-expression.js'].branchData['2'][3].ranCondition(result);
+  return result;
+}_$jscoverage['/sequence-expression.js'].branchData['2'][2].init(24, 12, 'l !== f && l');
+function visit25_2_2(result) {
+  _$jscoverage['/sequence-expression.js'].branchData['2'][2].ranCondition(result);
+  return result;
+}_$jscoverage['/sequence-expression.js'].branchData['2'][1].init(16, 28, 'w && (u = l !== f && l , i = n)');
+function visit24_2_1(result) {
+  _$jscoverage['/sequence-expression.js'].branchData['2'][1].ranCondition(result);
+  return result;
+}_$jscoverage['/sequence-expression.js'].branchData['1'][1].init(2, 6, 'i = 1 , !u');
+function visit23_1_1(result) {
+  _$jscoverage['/sequence-expression.js'].branchData['1'][1].ranCondition(result);
+  return result;
+}_$jscoverage['/sequence-expression.js'].lineData[1]++;
+if (visit23_1_1((i = 1 , !u))) {
+}
+_$jscoverage['/sequence-expression.js'].lineData[2]++;
+for (w && (u = visit25_2_2(visit28_2_5(visit26_2_3(visit29_2_6(l !== f)) && l)) , i = n); visit24_2_1(visit27_2_4(w && (u = visit25_2_2(visit28_2_5(visit26_2_3(visit29_2_6(l !== f)) && l)) , i = n))); i++) {
 }
