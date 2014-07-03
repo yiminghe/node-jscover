@@ -6,6 +6,7 @@ if (! _$jscoverage['sequence-expression.js']) {
 }
 if (! _$jscoverage['sequence-expression.js'].functionData) {
   _$jscoverage['sequence-expression.js'].functionData = [];
+ _$jscoverage['sequence-expression.js'].functionData.index = [];
 }
 if (! _$jscoverage['sequence-expression.js'].branchData) {
   _$jscoverage['sequence-expression.js'].branchData = {};

@@ -5,6 +5,7 @@ if (! _$jscoverage['complext-if.js']) {
 }
 if (! _$jscoverage['complext-if.js'].functionData) {
   _$jscoverage['complext-if.js'].functionData = [];
+ _$jscoverage['complext-if.js'].functionData.index = [];
 }
 if (! _$jscoverage['complext-if.js'].branchData) {
   _$jscoverage['complext-if.js'].branchData = {};

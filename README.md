@@ -113,3 +113,9 @@ console.log(jscover.instrument('var x=1;','test.js'));
 // ->  var x = 1;
 ```
 
+### changelog
+
+#### 0.4.0
+
+* compatible with [jscover](https://github.com/tntim96/JSCover)
+* [support function count](https://github.com/yiminghe/node-jscover/issues/1)

@@ -10,6 +10,7 @@ if (! _$jscoverage['condition.js']) {
 }
 if (! _$jscoverage['condition.js'].functionData) {
   _$jscoverage['condition.js'].functionData = [];
+ _$jscoverage['condition.js'].functionData.index = [];
   _$jscoverage['condition.js'].functionData[0] = 0;
 }
 if (! _$jscoverage['condition.js'].branchData) {
@@ -59,6 +60,7 @@ function visit1_2_1(result) {
 _$jscoverage['condition.js'].lineData[1]++;
 function x(x1, y1, fn) {
   _$jscoverage['condition.js'].functionData[0]++;
+  _$jscoverage['condition.js'].functionData.index[0] = '1:x';
   _$jscoverage['condition.js'].lineData[2]++;
   x1 = visit1_2_1(x1 > y1) ? 1 : 2;
   _$jscoverage['condition.js'].lineData[3]++;

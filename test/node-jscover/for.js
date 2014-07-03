@@ -6,6 +6,7 @@ if (! _$jscoverage['for.js']) {
 }
 if (! _$jscoverage['for.js'].functionData) {
   _$jscoverage['for.js'].functionData = [];
+ _$jscoverage['for.js'].functionData.index = [];
 }
 if (! _$jscoverage['for.js'].branchData) {
   _$jscoverage['for.js'].branchData = {};

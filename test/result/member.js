@@ -6,6 +6,7 @@ if (! _$jscoverage['member.js']) {
 }
 if (! _$jscoverage['member.js'].functionData) {
   _$jscoverage['member.js'].functionData = [];
+ _$jscoverage['member.js'].functionData.index = [];
   _$jscoverage['member.js'].functionData[0] = 0;
 }
 if (! _$jscoverage['member.js'].branchData) {
@@ -21,6 +22,7 @@ function visit1_2_1(result) {
 _$jscoverage['member.js'].lineData[1]++;
 function x(z, q) {
   _$jscoverage['member.js'].functionData[0]++;
+  _$jscoverage['member.js'].functionData.index[0] = '1:x';
   _$jscoverage['member.js'].lineData[2]++;
   return z[visit1_2_1(q > z)];
 }
