@@ -268,7 +268,7 @@ if (! _$jscoverage['/switch.js'].branchData) {
   _$jscoverage['/switch.js'].branchData['12'][1] = new BranchData();
 }
 _$jscoverage['/switch.js'].branchData['12'][1].init(169, 6, 'x1 > 1');
-function visit30_12_1(result) {
+function visit33_12_1(result) {
   _$jscoverage['/switch.js'].branchData['12'][1].ranCondition(result);
   return result;
 }_$jscoverage['/switch.js'].lineData[1]++;
@@ -290,7 +290,7 @@ function x(x1, y1) {
       y1 += 2;
   }
   _$jscoverage['/switch.js'].lineData[12]++;
-  switch (visit30_12_1(x1 > 1)) {
+  switch (visit33_12_1(x1 > 1)) {
     case true:
       _$jscoverage['/switch.js'].lineData[14]++;
       x1++;

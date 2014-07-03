@@ -7,6 +7,8 @@ if (! _$jscoverage['condition.js']) {
   _$jscoverage['condition.js'].lineData[4] = 0;
   _$jscoverage['condition.js'].lineData[5] = 0;
   _$jscoverage['condition.js'].lineData[6] = 0;
+  _$jscoverage['condition.js'].lineData[7] = 0;
+  _$jscoverage['condition.js'].lineData[8] = 0;
 }
 if (! _$jscoverage['condition.js'].functionData) {
   _$jscoverage['condition.js'].functionData = [];
@@ -27,6 +29,26 @@ if (! _$jscoverage['condition.js'].branchData) {
   _$jscoverage['condition.js'].branchData['5'][1] = new BranchData();
   _$jscoverage['condition.js'].branchData['6'] = [];
   _$jscoverage['condition.js'].branchData['6'][1] = new BranchData();
+  _$jscoverage['condition.js'].branchData['7'] = [];
+  _$jscoverage['condition.js'].branchData['7'][1] = new BranchData();
+  _$jscoverage['condition.js'].branchData['7'][2] = new BranchData();
+  _$jscoverage['condition.js'].branchData['8'] = [];
+  _$jscoverage['condition.js'].branchData['8'][1] = new BranchData();
+}
+_$jscoverage['condition.js'].branchData['8'][1].init(19, 7, 'a || {}');
+function visit9_8_1(result) {
+  _$jscoverage['condition.js'].branchData['8'][1].ranCondition(result);
+  return result;
+}
+_$jscoverage['condition.js'].branchData['7'][2].init(20, 5, 'i < 1');
+function visit8_7_2(result) {
+  _$jscoverage['condition.js'].branchData['7'][2].ranCondition(result);
+  return result;
+}
+_$jscoverage['condition.js'].branchData['7'][1].init(15, 6, 'a || 0');
+function visit7_7_1(result) {
+  _$jscoverage['condition.js'].branchData['7'][1].ranCondition(result);
+  return result;
 }
 _$jscoverage['condition.js'].branchData['6'][1].init(8, 9, 'x1 === y1');
 function visit6_6_1(result) {
@@ -71,4 +93,10 @@ function x(x1, y1, fn) {
   visit5_5_1(x1 < y1);
   _$jscoverage['condition.js'].lineData[6]++;
   fn(visit6_6_1(x1 === y1));
+  _$jscoverage['condition.js'].lineData[7]++;
+  for (var i = visit7_7_1(a || 0); visit8_7_2(i < 1); i++) {
+  }
+  _$jscoverage['condition.js'].lineData[8]++;
+  for (var x in visit9_8_1(a || {})) {
+  }
 }

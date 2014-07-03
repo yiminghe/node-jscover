@@ -265,24 +265,24 @@ if (! _$jscoverage['/declare.js'].branchData) {
   _$jscoverage['/declare.js'].branchData['7'][1] = new BranchData();
 }
 _$jscoverage['/declare.js'].branchData['7'][1].init(86, 38, 'q || function x() {\n  x++;\n}');
-function visit10_7_1(result) {
+function visit13_7_1(result) {
   _$jscoverage['/declare.js'].branchData['7'][1].ranCondition(result);
   return result;
 }_$jscoverage['/declare.js'].branchData['2'][1].init(13, 6, 'z > 10');
-function visit9_2_1(result) {
+function visit12_2_1(result) {
   _$jscoverage['/declare.js'].branchData['2'][1].ranCondition(result);
   return result;
 }_$jscoverage['/declare.js'].lineData[1]++;
 function x(z) {
   _$jscoverage['/declare.js'].functionData[0]++;
   _$jscoverage['/declare.js'].lineData[2]++;
-  var y = visit9_2_1(z > 10);
+  var y = visit12_2_1(z > 10);
   _$jscoverage['/declare.js'].lineData[3]++;
   var q = [function() {
   _$jscoverage['/declare.js'].functionData[1]++;
 }];
   _$jscoverage['/declare.js'].lineData[7]++;
-  var z = visit10_7_1(q || function x() {
+  var z = visit13_7_1(q || function x() {
   _$jscoverage['/declare.js'].functionData[2]++;
   _$jscoverage['/declare.js'].lineData[8]++;
   x++;

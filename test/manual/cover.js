@@ -246,21 +246,17 @@ catch (e) {
 if (typeof _$jscoverage === 'undefined') {
     _$jscoverage = {};
 }
-if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js']) {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'] = {};
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData = [];
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData[1] = 0;
+if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\node-jscover\\test\\manual\\code.js']) {
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\node-jscover\\test\\manual\\code.js'] = {};
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\node-jscover\\test\\manual\\code.js'].lineData = [];
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\node-jscover\\test\\manual\\code.js'].lineData[1] = 0;
 }
-if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData) {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData = [];
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData.index = [];
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData[0] = 0;
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData.index[0] = 'y[z]';
+if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\node-jscover\\test\\manual\\code.js'].functionData) {
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\node-jscover\\test\\manual\\code.js'].functionData = [];
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\node-jscover\\test\\manual\\code.js'].functionData.index = [];
 }
-if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData) {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData = {};
+if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\node-jscover\\test\\manual\\code.js'].branchData) {
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\node-jscover\\test\\manual\\code.js'].branchData = {};
 }
-_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData[1]++;
-y[z] = function () {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData[0]++;
-};
+_$jscoverage['E:\\code\\my-lib\\node-jscover\\node-jscover\\test\\manual\\code.js'].lineData[1]++;
+var x = 1;

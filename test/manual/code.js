@@ -1,1 +1,1 @@
-y[z]=function(){}
+var x=1;
