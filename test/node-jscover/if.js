@@ -13,7 +13,7 @@ if (! _$jscoverage['if.js'].functionData) {
   _$jscoverage['if.js'].functionData = [];
   _$jscoverage['if.js'].functionData.index = [];
   _$jscoverage['if.js'].functionData[0] = 0;
-  _$jscoverage['if.js'].functionData.index[0] = 'x';
+  _$jscoverage['if.js'].functionData.index[0] = [1,'x'];
 }
 if (! _$jscoverage['if.js'].branchData) {
   _$jscoverage['if.js'].branchData = {};

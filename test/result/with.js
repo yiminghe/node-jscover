@@ -10,7 +10,7 @@ if (! _$jscoverage['with.js'].functionData) {
   _$jscoverage['with.js'].functionData = [];
   _$jscoverage['with.js'].functionData.index = [];
   _$jscoverage['with.js'].functionData[0] = 0;
-  _$jscoverage['with.js'].functionData.index[0] = 'x';
+  _$jscoverage['with.js'].functionData.index[0] = [1,'x'];
 }
 if (! _$jscoverage['with.js'].branchData) {
   _$jscoverage['with.js'].branchData = {};

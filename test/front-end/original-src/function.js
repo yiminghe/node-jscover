@@ -11,3 +11,4 @@ z.q = function () {
 }
 z[q] = function () {
 }
+z['q z']=function(){}

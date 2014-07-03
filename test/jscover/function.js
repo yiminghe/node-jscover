@@ -249,6 +249,7 @@ if (! _$jscoverage['/function.js']) {
   _$jscoverage['/function.js'].lineData[6] = 0;
   _$jscoverage['/function.js'].lineData[10] = 0;
   _$jscoverage['/function.js'].lineData[12] = 0;
+  _$jscoverage['/function.js'].lineData[14] = 0;
 }
 if (! _$jscoverage['/function.js'].functionData) {
   _$jscoverage['/function.js'].functionData = [];
@@ -257,6 +258,7 @@ if (! _$jscoverage['/function.js'].functionData) {
   _$jscoverage['/function.js'].functionData[2] = 0;
   _$jscoverage['/function.js'].functionData[3] = 0;
   _$jscoverage['/function.js'].functionData[4] = 0;
+  _$jscoverage['/function.js'].functionData[5] = 0;
 }
 if (! _$jscoverage['/function.js'].branchData) {
   _$jscoverage['/function.js'].branchData = {};
@@ -281,4 +283,8 @@ z.q = function() {
 _$jscoverage['/function.js'].lineData[12]++;
 z[q] = function() {
   _$jscoverage['/function.js'].functionData[4]++;
+};
+_$jscoverage['/function.js'].lineData[14]++;
+z['q z'] = function() {
+  _$jscoverage['/function.js'].functionData[5]++;
 };

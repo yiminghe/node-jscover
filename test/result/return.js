@@ -12,7 +12,7 @@ if (! _$jscoverage['return.js'].functionData) {
   _$jscoverage['return.js'].functionData = [];
   _$jscoverage['return.js'].functionData.index = [];
   _$jscoverage['return.js'].functionData[0] = 0;
-  _$jscoverage['return.js'].functionData.index[0] = 'x';
+  _$jscoverage['return.js'].functionData.index[0] = [1,'x'];
 }
 if (! _$jscoverage['return.js'].branchData) {
   _$jscoverage['return.js'].branchData = {};

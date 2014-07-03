@@ -12,7 +12,7 @@ if (! _$jscoverage['condition.js'].functionData) {
   _$jscoverage['condition.js'].functionData = [];
   _$jscoverage['condition.js'].functionData.index = [];
   _$jscoverage['condition.js'].functionData[0] = 0;
-  _$jscoverage['condition.js'].functionData.index[0] = 'x';
+  _$jscoverage['condition.js'].functionData.index[0] = [1,'x'];
 }
 if (! _$jscoverage['condition.js'].branchData) {
   _$jscoverage['condition.js'].branchData = {};
