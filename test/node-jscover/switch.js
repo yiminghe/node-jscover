@@ -17,8 +17,9 @@ if (! _$jscoverage['switch.js']) {
 }
 if (! _$jscoverage['switch.js'].functionData) {
   _$jscoverage['switch.js'].functionData = [];
- _$jscoverage['switch.js'].functionData.index = [];
+  _$jscoverage['switch.js'].functionData.index = [];
   _$jscoverage['switch.js'].functionData[0] = 0;
+  _$jscoverage['switch.js'].functionData.index[0] = 'x';
 }
 if (! _$jscoverage['switch.js'].branchData) {
   _$jscoverage['switch.js'].branchData = {};
@@ -33,7 +34,6 @@ function visit1_12_1(result) {
 _$jscoverage['switch.js'].lineData[1]++;
 function x(x1, y1) {
   _$jscoverage['switch.js'].functionData[0]++;
-  _$jscoverage['switch.js'].functionData.index[0] = '1:x';
   _$jscoverage['switch.js'].lineData[2]++;
   switch (x1) {
   case 1:

@@ -11,8 +11,9 @@ if (! _$jscoverage['if.js']) {
 }
 if (! _$jscoverage['if.js'].functionData) {
   _$jscoverage['if.js'].functionData = [];
- _$jscoverage['if.js'].functionData.index = [];
+  _$jscoverage['if.js'].functionData.index = [];
   _$jscoverage['if.js'].functionData[0] = 0;
+  _$jscoverage['if.js'].functionData.index[0] = 'x';
 }
 if (! _$jscoverage['if.js'].branchData) {
   _$jscoverage['if.js'].branchData = {};
@@ -53,7 +54,6 @@ function visit1_2_1(result) {
 _$jscoverage['if.js'].lineData[1]++;
 function x(x1, y1) {
   _$jscoverage['if.js'].functionData[0]++;
-  _$jscoverage['if.js'].functionData.index[0] = '1:x';
   _$jscoverage['if.js'].lineData[2]++;
   if (visit1_2_1(visit2_2_2(x1 > 1) && visit3_2_3(y1 < 1))) {
     _$jscoverage['if.js'].lineData[3]++;

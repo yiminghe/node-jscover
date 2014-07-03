@@ -10,8 +10,9 @@ if (! _$jscoverage['return.js']) {
 }
 if (! _$jscoverage['return.js'].functionData) {
   _$jscoverage['return.js'].functionData = [];
- _$jscoverage['return.js'].functionData.index = [];
+  _$jscoverage['return.js'].functionData.index = [];
   _$jscoverage['return.js'].functionData[0] = 0;
+  _$jscoverage['return.js'].functionData.index[0] = 'x';
 }
 if (! _$jscoverage['return.js'].branchData) {
   _$jscoverage['return.js'].branchData = {};
@@ -54,7 +55,6 @@ function visit1_2_1(result) {
 _$jscoverage['return.js'].lineData[1]++;
 function x(z) {
   _$jscoverage['return.js'].functionData[0]++;
-  _$jscoverage['return.js'].functionData.index[0] = '1:x';
   _$jscoverage['return.js'].lineData[2]++;
   if (visit1_2_1(z > 1)) {
     _$jscoverage['return.js'].lineData[3]++;

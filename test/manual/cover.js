@@ -253,8 +253,9 @@ if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js']) {
 }
 if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData) {
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData = [];
- _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData.index = [];
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData.index = [];
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData[0] = 0;
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData.index[0] = 'y[z]';
 }
 if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData) {
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData = {};
@@ -262,5 +263,4 @@ if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].bran
 _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData[1]++;
 y[z] = function () {
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData[0]++;
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData.index[0] = '1:y[z]';
 };
