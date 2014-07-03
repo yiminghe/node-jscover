@@ -250,24 +250,17 @@ if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js']) {
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'] = {};
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData = [];
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData[1] = 0;
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData[3] = 0;
 }
 if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData) {
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData = [];
  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData.index = [];
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData[0] = 0;
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData[1] = 0;
 }
 if (! _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData) {
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].branchData = {};
 }
 _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData[1]++;
-function x() {
+y[z] = function () {
   _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData[0]++;
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData.index[0] = '1:x';
-}
-_$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].lineData[3]++;
-y = function () {
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData[1]++;
-  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData.index[1] = '3:anonymous';
+  _$jscoverage['E:\\code\\my-lib\\node-jscover\\test\\manual\\code.js'].functionData.index[0] = '1:y[z]';
 };

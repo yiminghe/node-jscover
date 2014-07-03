@@ -1,4 +1,1 @@
-function x() {
-}
-y = function () {
-}
+y[z]=function(){}
