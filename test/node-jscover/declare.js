@@ -12,11 +12,11 @@ if (! _$jscoverage['declare.js'].functionData) {
   _$jscoverage['declare.js'].functionData = [];
   _$jscoverage['declare.js'].functionData.index = [];
   _$jscoverage['declare.js'].functionData[0] = 0;
-  _$jscoverage['declare.js'].functionData.index[0] = [1,'x'];
+  _$jscoverage['declare.js'].functionData.index[0] = ['x',1,1];
   _$jscoverage['declare.js'].functionData[1] = 0;
-  _$jscoverage['declare.js'].functionData.index[1] = [4,'anonymous'];
+  _$jscoverage['declare.js'].functionData.index[1] = ['anonymous',4,9];
   _$jscoverage['declare.js'].functionData[2] = 0;
-  _$jscoverage['declare.js'].functionData.index[2] = [7,'x'];
+  _$jscoverage['declare.js'].functionData.index[2] = ['x',7,18];
 }
 if (! _$jscoverage['declare.js'].branchData) {
   _$jscoverage['declare.js'].branchData = {};

@@ -12,17 +12,17 @@ if (! _$jscoverage['function.js'].functionData) {
   _$jscoverage['function.js'].functionData = [];
   _$jscoverage['function.js'].functionData.index = [];
   _$jscoverage['function.js'].functionData[0] = 0;
-  _$jscoverage['function.js'].functionData.index[0] = [2,'anonymous'];
+  _$jscoverage['function.js'].functionData.index[0] = ['anonymous',2,9];
   _$jscoverage['function.js'].functionData[1] = 0;
-  _$jscoverage['function.js'].functionData.index[1] = [4,'y'];
+  _$jscoverage['function.js'].functionData.index[1] = ['y',4,1];
   _$jscoverage['function.js'].functionData[2] = 0;
-  _$jscoverage['function.js'].functionData.index[2] = [7,'q'];
+  _$jscoverage['function.js'].functionData.index[2] = ['q',7,8];
   _$jscoverage['function.js'].functionData[3] = 0;
-  _$jscoverage['function.js'].functionData.index[3] = [10,'z.q'];
+  _$jscoverage['function.js'].functionData.index[3] = ['z.q',10,7];
   _$jscoverage['function.js'].functionData[4] = 0;
-  _$jscoverage['function.js'].functionData.index[4] = [12,'z[q]'];
+  _$jscoverage['function.js'].functionData.index[4] = ['z[q]',12,8];
   _$jscoverage['function.js'].functionData[5] = 0;
-  _$jscoverage['function.js'].functionData.index[5] = [14,'z[\'q z\']'];
+  _$jscoverage['function.js'].functionData.index[5] = ['z[\'q z\']',14,10];
 }
 if (! _$jscoverage['function.js'].branchData) {
   _$jscoverage['function.js'].branchData = {};

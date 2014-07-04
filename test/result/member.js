@@ -8,7 +8,7 @@ if (! _$jscoverage['member.js'].functionData) {
   _$jscoverage['member.js'].functionData = [];
   _$jscoverage['member.js'].functionData.index = [];
   _$jscoverage['member.js'].functionData[0] = 0;
-  _$jscoverage['member.js'].functionData.index[0] = [1,'x'];
+  _$jscoverage['member.js'].functionData.index[0] = ['x',1,1];
 }
 if (! _$jscoverage['member.js'].branchData) {
   _$jscoverage['member.js'].branchData = {};

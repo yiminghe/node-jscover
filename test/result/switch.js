@@ -19,7 +19,7 @@ if (! _$jscoverage['switch.js'].functionData) {
   _$jscoverage['switch.js'].functionData = [];
   _$jscoverage['switch.js'].functionData.index = [];
   _$jscoverage['switch.js'].functionData[0] = 0;
-  _$jscoverage['switch.js'].functionData.index[0] = [1,'x'];
+  _$jscoverage['switch.js'].functionData.index[0] = ['x',1,1];
 }
 if (! _$jscoverage['switch.js'].branchData) {
   _$jscoverage['switch.js'].branchData = {};

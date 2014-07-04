@@ -115,6 +115,10 @@ console.log(jscover.instrument('var x=1;','test.js'));
 
 ### changelog
 
+#### 0.5.0
+
+* change function count format: https://github.com/yiminghe/node-jscover/issues/1
+
 #### 0.4.0
 
 * compatible with [jscover](https://github.com/tntim96/JSCover)
