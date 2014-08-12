@@ -124,6 +124,10 @@ http://dev.kissyui.com/kissy/src/xtemplate/-/tests/coverage
 
 ### changelog
 
+#### 0.6.0
+
+* add console reporter for mocha and jasmine: /lib/reporters/...
+
 #### 0.5.0
 
 * change function count format: https://github.com/yiminghe/node-jscover/issues/1
