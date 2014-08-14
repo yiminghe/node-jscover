@@ -66,7 +66,7 @@ node version of [JSCover](https://github.com/tntim96/JSCover).  only support fil
 
 ### usage doc
 
-[https://github.com/yiminghe/node-jscover/docs/usage.md](https://github.com/yiminghe/node-jscover/docs/usage.md)
+[https://github.com/yiminghe/node-jscover/blob/master/docs/usage.md](https://github.com/yiminghe/node-jscover/blob/master/docs/usage.md)
 
 ### use api
 
