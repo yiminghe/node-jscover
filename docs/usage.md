@@ -19,7 +19,7 @@ modulex.add('i18n', {
 });
 ```
 
-那么可以访问一个实际不存在的文件 localhost/i18n-coverage.js 得到 nodejs-cover 动态 instrument 的脚本:
+那么可以访问一个实际不存在的文件 localhost/i18n-coverage.js 或 localhost/_node_jscover/i18n.js 得到 nodejs-cover 动态 instrument 的脚本:
 ```javascript
 if (! _$jscoverage['lib/i18n.js']) {
   _$jscoverage['lib/i18n.js'] = {};
@@ -50,7 +50,7 @@ modulex.add('i18n', {
 
 ``` javascript
 var app = require('express')();
-// 动态 intrument -coverage 结尾的 js 文件
+// 动态 instrument -coverage 结尾的 js 文件 或 /_node_jscover/ 开头的 url
 app.use(require('node-jscover-handler')());
 app.listen(8000);
 ```
