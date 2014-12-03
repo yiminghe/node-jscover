@@ -119,8 +119,6 @@ console.log(jscover.instrument('var x=1;','test.js'));
 
 ### example
 
-http://dev.kissyui.com/kissy/src/xtemplate/-/tests/coverage
-
 ![xtemplate coverage info](http://gtms02.alicdn.com/tps/i2/TB1hMCKFVXXXXXFXVXXR0b5GXXX-1133-615.png)
 
 ![xtemplate coverage info](http://gtms02.alicdn.com/tps/i2/TB1WxCNFVXXXXc_XpXXR0b5GXXX-1133-615.png)
