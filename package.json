@@ -1,6 +1,6 @@
 {
   "name": "node-jscover",
-  "version": "0.6.11",
+  "version": "0.6.12",
   "description": "node version of JSCover",
   "author": "yiminghe <yiminghe@gmail.com>",
   "directories": {
